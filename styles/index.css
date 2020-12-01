@@ -1,0 +1,123 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+body {
+    color: #000;
+}
+
+@font-face {
+    font-family: GrifoS;
+    src: url(/fonts/GrifoS.otf);
+}
+@font-face {
+    font-family: GrifoSBold;
+    src: url(/fonts/GrifoS-Bold.otf);
+}
+@font-face {
+    font-family: GrifoSBoldItalic;
+    src: url(/fonts/GrifoS-BoldItalic.otf);
+}
+@font-face {
+    font-family: GrifoSItalic;
+    src: url(/fonts/GrifoS-Italic.otf);
+}
+@font-face {
+    font-family: GrifoSLight;
+    src: url(/fonts/GrifoS-Light.otf);
+}
+@font-face {
+    font-family: GrifoSLightItalic;
+    src: url(/fonts/GrifoS-LightItalic.otf);
+}
+
+@font-face {
+    font-family: 'mushroom';
+    src: url(/fonts/mushroom.ttf)  format('truetype')
+}
+
+.italic {
+    font-style: normal;
+    font-family: GrifoSItalic, serif;
+}
+.italic-bold {
+    font-style: normal;
+    font-family: GrifoSBoldItalic, serif;
+}
+.non-italic {
+    font-style: normal;
+    font-family: GrifoS, serif;
+}
+.font-italic {
+    font-family: GrifoSItalic, serif;
+    font-weight: normal;
+}
+.font-bold {
+    font-family: GrifoSBold, serif;
+    font-weight: normal;
+}
+.font-light {
+    font-family: GrifoSLight, serif;
+    font-weight: normal;
+}
+.font-light-italic {
+    font-family: GrifoSLightItalic, serif;
+    font-weight: normal;
+}
+.font-bold-italic {
+    font-family: GrifoSBoldItalic, serif;
+    font-weight: normal;
+}
+
+.font-mushroom {
+    font-family: mushroom, serif;
+    font-weight: normal;
+}
+
+body {
+    font-family: GrifoS, serif;
+}
+
+.top-20 {
+    top: 5rem;
+}
+
+.blur {
+    filter: blur(4px);
+}
+.container {
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .container-l {
+        max-width: 640px
+    }
+}
+@media (min-width: 768px) {
+    .container-l {
+        max-width: 768px
+    }
+}
+@media (min-width: 1024px) {
+    .container-l {
+        max-width:1024px
+    }
+}
+@media (min-width: 1280px) {
+    .container-l {
+        max-width:1440px!important;
+    }
+}
+
+.left-4 {
+    left: 1rem;
+}
+.right-4 {
+    right: 1rem;
+}
+.bottom-8 {
+    bottom: 2rem;
+}
