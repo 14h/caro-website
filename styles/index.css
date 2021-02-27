@@ -9,75 +9,51 @@ body {
 }
 
 @font-face {
-    font-family: GrifoS;
-    src: url(/fonts/GrifoS.otf);
-}
-@font-face {
-    font-family: GrifoSBold;
-    src: url(/fonts/GrifoS-Bold.otf);
-}
-@font-face {
-    font-family: GrifoSBoldItalic;
-    src: url(/fonts/GrifoS-BoldItalic.otf);
-}
-@font-face {
-    font-family: GrifoSItalic;
-    src: url(/fonts/GrifoS-Italic.otf);
-}
-@font-face {
-    font-family: GrifoSLight;
-    src: url(/fonts/GrifoS-Light.otf);
-}
-@font-face {
-    font-family: GrifoSLightItalic;
-    src: url(/fonts/GrifoS-LightItalic.otf);
-}
-
-@font-face {
-    font-family: 'mushroom';
-    src: url(/fonts/mushroom.ttf)  format('truetype')
+    font-family: 'poiret-one';
+    src: url(/fonts/PoiretOne-Regular.ttf)  format('truetype');
 }
 
 .italic {
     font-style: normal;
-    font-family: GrifoSItalic, serif;
+    font-family: poiret-one, serif;
 }
 .italic-bold {
     font-style: normal;
-    font-family: GrifoSBoldItalic, serif;
+    font-family: poiret-one, serif;
 }
 .non-italic {
     font-style: normal;
-    font-family: GrifoS, serif;
+    font-family: poiret-one, serif;
 }
 .font-italic {
-    font-family: GrifoSItalic, serif;
+    font-family: poiret-one, serif;
     font-weight: normal;
 }
 .font-bold {
-    font-family: GrifoSBold, serif;
+    font-family: poiret-one, serif;
     font-weight: normal;
 }
 .font-light {
-    font-family: GrifoSLight, serif;
+    font-family: poiret-one, serif;
     font-weight: normal;
 }
 .font-light-italic {
-    font-family: GrifoSLightItalic, serif;
+    font-family: poiret-one, serif;
     font-weight: normal;
 }
 .font-bold-italic {
-    font-family: GrifoSBoldItalic, serif;
+    font-family: poiret-one, serif;
     font-weight: normal;
 }
 
 .font-mushroom {
-    font-family: mushroom, serif;
+    font-family: poiret-one, serif;
     font-weight: normal;
 }
 
 body {
-    font-family: GrifoS, serif;
+    font-family: poiret-one, serif;
+    font-weight: normal;
 }
 
 .top-20 {

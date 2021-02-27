@@ -5,8 +5,8 @@ import Container from '../../components/container';
 import Header from '../../components/header';
 import Layout from '../../components/layout';
 import {get_all_projects, get_project} from '../../lib/api';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
+import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
+import Carousel, {Dots} from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import {useState} from "react";
 
@@ -25,7 +25,9 @@ export default function Post({project}) {
             <Layout>
                 <Container>
                     <Header/>
-                    <div className='text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left'>Loading…</div>
+                    <div
+                        className='text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mt-20 text-center md:text-left'>Loading…
+                    </div>
                 </Container>
             </Layout>
         )
@@ -38,63 +40,63 @@ export default function Post({project}) {
                 <Header
                     selected_nav_elem='projects'
                 />
-                    <div className='mt-32'>
-                        <article>
-                            <Head>
-                                <title>
-                                    {project.name}
-                                </title>
-                                {/*<meta property="og:image" content={project.coverImage.url}/>*/}
-                            </Head>
-                            <div className="mt-20 max-w-6xl mx-auto">
-                                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold md:leading-none mb-12 text-center">
-                                    {project.name}
-                                </h1>
-                                <div className='lg:flex'>
-                                    <div className='m-8 lg:w-3/12'>
-                                        {documentToReactComponents(project.sideText)}
-                                    </div>
-                                    <div className='m-8 lg:w-9/12'>
-                                        <Carousel
-                                            value={value}
-                                            onChange={setValue}
-                                        >
-                                            {
-                                                project.images?.map(
-                                                    (img, key) => (
-                                                        <img
-                                                            key={key}
-                                                            src={img?.fields?.file?.url ?? ''}
-                                                        />
-                                                    )
+                <div className='mt-64'>
+                    <article>
+                        <Head>
+                            <title>
+                                {project.name}
+                            </title>
+                            {/*<meta property="og:image" content={project.coverImage.url}/>*/}
+                        </Head>
+                        <div className="mt-20 container-l mx-auto">
+                            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold md:leading-none mb-12 text-center">
+                                {project.name}
+                            </h1>
+                            <div className='lg:flex'>
+                                <div className='m-8 lg:w-3/12'>
+                                    {documentToReactComponents(project.sideText)}
+                                </div>
+                                <div className='m-8 lg:w-9/12'>
+                                    <Carousel
+                                        value={value}
+                                        onChange={setValue}
+                                    >
+                                        {
+                                            project.images?.map(
+                                                (img, key) => (
+                                                    <img
+                                                        key={key}
+                                                        src={img?.fields?.file?.url ?? ''}
+                                                        style={{
+                                                            maxWidth: '100%',
+                                                            padding: '10px',
+                                                        }}
+                                                    />
                                                 )
-                                            }
-                                        </Carousel>
-                                        <Dots
-                                            value={value}
-                                            onChange={setValue}
-                                            number={4}
-                                            thumbnails={
-                                                project.images.map(
-                                                    (img, key) => (
-                                                        <img
-                                                            key={key}
-                                                            className="h-32"
-                                                            src={img?.fields?.file?.url ?? ''}
-                                                        />
-                                                    )
+                                            )
+                                        }
+                                    </Carousel>
+                                    <Dots
+                                        value={value}
+                                        onChange={setValue}
+                                        number={5}
+                                        thumbnails={
+                                            project.images.map(
+                                                (img, key) => (
+                                                    <img
+                                                        key={key}
+                                                        // className="h-32"
+                                                        src={img?.fields?.file?.url ?? ''}
+                                                    />
                                                 )
-                                            }
-                                        />
-                                        {/*<img*/}
-                                        {/*    src={project.images[0].fields.file.url}*/}
-                                        {/*    alt={project.name}*/}
-                                        {/*/>*/}
-                                    </div>
+                                            )
+                                        }
+                                    />
                                 </div>
                             </div>
-                        </article>
-                    </div>
+                        </div>
+                    </article>
+                </div>
             </Container>
         </Layout>
     )

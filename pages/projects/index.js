@@ -7,8 +7,6 @@ import React, {useState} from "react";
 
 
 export default function Projects({projects}) {
-    console.log(projects);
-
     return (
         <>
             <Layout>
@@ -18,7 +16,7 @@ export default function Projects({projects}) {
                     <Header
                         selected_nav_elem='projects'
                     />
-                    <h1 className="mt-16 text-6xl md:text-6xl lg:text-7xl font-bold md:leading-none mb-12 text-center font-mushroom">
+                    <h1 className="mt-16 text-6xl md:text-6xl lg:text-7xl font-bold md:leading-none mt-64 mb-12 text-center font-mushroom">
                         WORK
                     </h1>
                     <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 container mx-auto px-20 relative`}>
