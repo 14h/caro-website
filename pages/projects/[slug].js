@@ -83,6 +83,8 @@ export default function Post({project}) {
                                         addArrowClickHandler={true}
                                         slidesPerPage={5}
                                         infinite={true}
+                                        arrowLeft={<a href='#'>⟵</a>}
+                                        arrowRight={<a href='#'>⟶</a>}
                                     >
                                         {
                                             project.images?.map(
