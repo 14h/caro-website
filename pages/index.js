@@ -28,7 +28,10 @@ export default function Index() {
                                 CINEMATOGRAPHY
                             </motion.span>
                         </div>
-                        <div className='flex flex-row justify-center items-center'>
+                        <motion.div
+                            className='flex flex-row justify-center items-center'
+                            layoutId='navigation'
+                        >
                             <Link href='/projects'>
                                 <div className={`text-white font-mushroom p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300`}>
                                     WORK
@@ -39,7 +42,7 @@ export default function Index() {
                                     ABOUT
                                 </div>
                             </Link>
-                        </div>
+                        </motion.div>
                     </motion.div>
                 </Container>
             </Layout>

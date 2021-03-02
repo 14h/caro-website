@@ -31,23 +31,21 @@ export default function Header({selected_nav_elem}) {
                     </div>
                 </Link>
 
-                <div className='flex flex-row justify-center items-center lg:mr-20 mb-4 lg:mb-0'>
+                <motion.div
+                    className='flex flex-row justify-center items-center lg:mr-20 mb-4 lg:mb-0'
+                    layoutId='navigation'
+                >
                     <Link href='/projects'>
                         <div className={`font-mushroom p-4 cursor-pointer border-b-2 border-solid ${selected_nav_elem === 'projects' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
                             WORK
                         </div>
                     </Link>
-                    {/*<Link href='/work-in-progress'>*/}
-                    {/*    <div className={`font-mushroom p-4 cursor-pointer border-b-2 border-solid ${selected_nav_elem === 'work_in_progress' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>*/}
-                    {/*        WORK IN PROGRESS*/}
-                    {/*    </div>*/}
-                    {/*</Link>*/}
                     <Link href='/about'>
                         <div className={`font-mushroom p-4 cursor-pointer border-b-2 border-solid ${selected_nav_elem === 'about' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
                             ABOUT
                         </div>
                     </Link>
-                </div>
+                </motion.div>
 
             </div>
         </motion.div>
