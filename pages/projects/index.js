@@ -3,7 +3,7 @@ import Layout from '../../components/layout'
 import Head from 'next/head'
 import Header from "../../components/header";
 import {get_all_projects} from "../../lib/api";
-import React, {useState} from "react";
+import React from "react";
 
 
 export default function Projects({projects}) {

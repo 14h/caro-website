@@ -1,14 +1,16 @@
 import {useRouter} from 'next/router';
 import Head from 'next/head';
 import ErrorPage from 'next/error';
+
+import {useState} from "react";
+
+import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
+import Carousel, {Dots} from '@brainhubeu/react-carousel';
+
 import Container from '../../components/container';
 import Header from '../../components/header';
 import Layout from '../../components/layout';
 import {get_all_projects, get_project} from '../../lib/api';
-import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
-import Carousel, {Dots} from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
-import {useState} from "react";
 
 //https://www.framer.com/api/motion/
 

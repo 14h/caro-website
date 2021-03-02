@@ -1,19 +1,9 @@
-import Container from '../components/container'
-import Layout from '../components/layout'
-import {get_all_projects} from '../lib/api'
-import Head from 'next/head'
+import Container from '../components/container';
+import Layout from '../components/layout';
+import Head from 'next/head';
 import Link from "next/link";
-import {useState} from "react";
 
-export default function Index({projects}) {
-    const [visible, set_visible] = useState(false);
-
-    setTimeout(() => {
-        set_visible(true);
-    }, 3000);
-
-    console.log(projects);
-
+export default function Index() {
     return (
         <div className='overflow-y-hidden'>
             <Layout>
@@ -53,13 +43,4 @@ export default function Index({projects}) {
             </Layout>
         </div>
     )
-}
-
-export async function getStaticProps() {
-    const projects = await get_all_projects()
-    return {
-        props: {
-            projects
-        },
-    }
 }
