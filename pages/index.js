@@ -16,13 +16,13 @@ export default function Index() {
                     >
                         <div className='flex flex-col items-center justify-center'>
                             <motion.h1
-                                className='font-mushroom text-6xl lg:text-8xl text-center text-white'
+                                className='text-6xl lg:text-8xl text-center text-white'
                                 layoutId='carolin-hauke'
                             >
                                 CAROLIN HAUKE
                             </motion.h1>
                             <motion.span
-                                className='text-white text-2xl font-mushroom'
+                                className='text-white text-2xl'
                                 layoutId='cinematography'
                             >
                                 CINEMATOGRAPHY
@@ -33,12 +33,12 @@ export default function Index() {
                             layoutId='navigation'
                         >
                             <Link href='/projects'>
-                                <div className={`text-white font-mushroom p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300`}>
+                                <div className={`text-white p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300`}>
                                     WORK
                                 </div>
                             </Link>
                             <Link href='/about'>
-                                <div className={`text-white font-mushroom p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300 `}>
+                                <div className={`text-white p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300 `}>
                                     ABOUT
                                 </div>
                             </Link>

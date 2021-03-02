@@ -17,7 +17,7 @@ export default function Projects({projects}) {
                     <Header
                         selected_nav_elem='projects'
                     />
-                    <h1 className="text-6xl md:text-6xl lg:text-7xl font-bold md:leading-none mt-48 mb-12 text-center font-mushroom">
+                    <h1 className="text-6xl md:text-6xl lg:text-7xl font-bold md:leading-none mt-48 mb-12 text-center">
                         WORK
                     </h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 container mx-auto px-20 relative">

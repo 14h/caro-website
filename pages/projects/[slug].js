@@ -49,7 +49,7 @@ export default function Post({project}) {
                         {/*<meta property="og:image" content={project.coverImage.url}/>*/}
                     </Head>
                     <div className="mt-48 container-l mx-auto">
-                        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold md:leading-none mb-12 text-center">
+                        <h1 className="text-6xl md:text-6xl lg:text-7xl font-bold md:leading-none mt-48 mb-12 text-center">
                             {project.name}
                         </h1>
                         <div className='lg:flex'>

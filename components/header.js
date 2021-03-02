@@ -16,13 +16,13 @@ export default function Header({selected_nav_elem}) {
                     <div className='flex flex-row justify-center items-center m-4 lg:ml-16'>
                         <a className="hover:underline text-center">
                             <motion.h1
-                                className='font-mushroom text-2xl lg:text-3xl text-center text-white'
+                                className='text-2xl lg:text-3xl text-center text-white'
                                 layoutId='carolin-hauke'
                             >
                                 CAROLIN HAUKE
                             </motion.h1>
                             <motion.span
-                                className='text-white text-md lg:text-xl font-mushroom'
+                                className='text-white text-md lg:text-xl'
                                 layoutId='cinematography'
                             >
                                 CINEMATOGRAPHY
@@ -36,12 +36,12 @@ export default function Header({selected_nav_elem}) {
                     layoutId='navigation'
                 >
                     <Link href='/projects'>
-                        <div className={`font-mushroom p-4 cursor-pointer border-b-2 border-solid ${selected_nav_elem === 'projects' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
+                        <div className={`p-4 cursor-pointer border-b-2 border-solid ${selected_nav_elem === 'projects' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
                             WORK
                         </div>
                     </Link>
                     <Link href='/about'>
-                        <div className={`font-mushroom p-4 cursor-pointer border-b-2 border-solid ${selected_nav_elem === 'about' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
+                        <div className={`p-4 cursor-pointer border-b-2 border-solid ${selected_nav_elem === 'about' ? 'border-gray-400' : 'border-transparent'} hover:border-gray-300`}>
                             ABOUT
                         </div>
                     </Link>
