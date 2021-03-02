@@ -1,10 +1,9 @@
-import Container from '../../components/container'
-import Layout from '../../components/layout'
-import Head from 'next/head'
+import Container from '../../components/container';
+import Layout from '../../components/layout';
+import Head from 'next/head';
 import Header from "../../components/header";
 import {get_all_projects} from "../../lib/api";
 import React from "react";
-
 
 export default function Projects({projects}) {
     return (
@@ -16,7 +15,7 @@ export default function Projects({projects}) {
                     <Header
                         selected_nav_elem='projects'
                     />
-                    <h1 className="mt-16 text-6xl md:text-6xl lg:text-7xl font-bold md:leading-none mt-64 mb-12 text-center font-mushroom">
+                    <h1 className="text-6xl md:text-6xl lg:text-7xl font-bold md:leading-none mt-48 mb-12 text-center font-mushroom">
                         WORK
                     </h1>
                     <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 container mx-auto px-20 relative`}>
@@ -51,7 +50,6 @@ export default function Projects({projects}) {
                                             </div>
                                         </div>
                                     </a>
-
                                 )
                             )
                         }
