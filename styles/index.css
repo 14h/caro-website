@@ -6,6 +6,9 @@
 
 body {
     color: #000;
+    font-family: poiret-one, serif;
+    font-weight: normal;
+    overflow: hidden;
 }
 
 @font-face {
@@ -47,11 +50,6 @@ body {
 }
 
 .font-mushroom {
-    font-family: poiret-one, serif;
-    font-weight: normal;
-}
-
-body {
     font-family: poiret-one, serif;
     font-weight: normal;
 }
