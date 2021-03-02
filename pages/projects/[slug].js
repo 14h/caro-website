@@ -70,7 +70,6 @@ export default function Post({project}) {
                                                         src={img?.fields?.file?.url ?? ''}
                                                         style={{
                                                             maxWidth: '100%',
-                                                            padding: '10px',
                                                         }}
                                                     />
                                                 )
