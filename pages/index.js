@@ -1,25 +1,32 @@
-import Container from '../components/container';
-import Layout from '../components/layout';
-import Head from 'next/head';
+import Container from "../components/container";
+import Layout from "../components/layout";
+import Head from "next/head";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Index() {
     return (
         <div className='overflow-y-hidden'>
             <Layout>
-                <Head>
-                </Head>
+                <Head/>
                 <Container>
-                    <div
+                    <motion.div
                         className='h-screen flex flex-col items-center justify-around py-16 bg-black'
+                        layoutId='bg-black'
                     >
                         <div className='flex flex-col items-center justify-center'>
-                            <h1 className='font-mushroom text-6xl lg:text-8xl text-center text-white'>
+                            <motion.h1
+                                className='font-mushroom text-6xl lg:text-8xl text-center text-white'
+                                layoutId='carolin-hauke'
+                            >
                                 CAROLIN HAUKE
-                            </h1>
-                            <span className='text-white text-2xl font-mushroom'>
-                                Cinematography
-                            </span>
+                            </motion.h1>
+                            <motion.span
+                                className='text-white text-2xl font-mushroom'
+                                layoutId='cinematography'
+                            >
+                                CINEMATOGRAPHY
+                            </motion.span>
                         </div>
                         <div className='flex flex-row justify-center items-center'>
                             <Link href='/projects'>
@@ -27,18 +34,13 @@ export default function Index() {
                                     WORK
                                 </div>
                             </Link>
-                            {/*<Link href='/work-in-progress'>*/}
-                            {/*    <div className={`text-white font-mushroom p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300`}>*/}
-                            {/*        WORK IN PROGRESS*/}
-                            {/*    </div>*/}
-                            {/*</Link>*/}
                             <Link href='/about'>
                                 <div className={`text-white font-mushroom p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300 `}>
                                     ABOUT
                                 </div>
                             </Link>
                         </div>
-                    </div>
+                    </motion.div>
                 </Container>
             </Layout>
         </div>

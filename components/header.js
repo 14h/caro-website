@@ -1,10 +1,12 @@
 import Link from 'next/link'
+import {motion} from "framer-motion";
 
 export default function Header({selected_nav_elem}) {
 
 
     return (
-        <div
+        <motion.div
+            layoutId='bg-black'
             className='bg-black text-white fixed top-0 left-0 right-0 z-50  pt-2'
         >
             <div
@@ -12,9 +14,19 @@ export default function Header({selected_nav_elem}) {
             >
                 <Link href="/">
                     <div className='flex flex-row justify-center items-center m-4 lg:ml-16'>
-                        <a className="hover:underline">
-                            <div className='font-light text-2xl lg:text-3xl text-center font-mushroom'>CAROLIN HAUKE</div>
-                            <div className='font-bold text-md lg:text-xl text-center font-mushroom'>CINEMATOGRAPHY</div>
+                        <a className="hover:underline text-center">
+                            <motion.h1
+                                className='font-mushroom text-2xl lg:text-3xl text-center text-white'
+                                layoutId='carolin-hauke'
+                            >
+                                CAROLIN HAUKE
+                            </motion.h1>
+                            <motion.span
+                                className='text-white text-md lg:text-xl font-mushroom'
+                                layoutId='cinematography'
+                            >
+                                CINEMATOGRAPHY
+                            </motion.span>
                         </a>
                     </div>
                 </Link>
@@ -38,6 +50,6 @@ export default function Header({selected_nav_elem}) {
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
