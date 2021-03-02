@@ -32,7 +32,7 @@ export default function Projects({projects}) {
                                             className='relative overflow-hidden'
                                         >
                                             <img
-                                                className='h-auto w-full object-cover'
+                                                className='h-auto  object-cover'
                                                 src={project?.coverImage?.fields?.file?.url ?? ''}
                                                 alt={project.slug}
                                             />

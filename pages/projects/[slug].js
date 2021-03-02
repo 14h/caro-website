@@ -60,12 +60,13 @@ export default function Post({project}) {
                                     <Carousel
                                         value={value}
                                         onChange={setValue}
+                                        infinite={true}
                                     >
                                         {
                                             project.images?.map(
-                                                (img, key) => (
+                                                (img) => (
                                                     <img
-                                                        key={key}
+                                                        key={img?.fields?.file?.url}
                                                         src={img?.fields?.file?.url ?? ''}
                                                         style={{
                                                             maxWidth: '100%',
@@ -76,22 +77,29 @@ export default function Post({project}) {
                                             )
                                         }
                                     </Carousel>
-                                    <Dots
+                                    <Carousel
                                         value={value}
                                         onChange={setValue}
-                                        number={5}
-                                        thumbnails={
-                                            project.images.map(
+                                        addArrowClickHandler={true}
+                                        slidesPerPage={5}
+                                        infinite={true}
+                                    >
+                                        {
+                                            project.images?.map(
                                                 (img, key) => (
                                                     <img
-                                                        key={key}
-                                                        // className="h-32"
+                                                        key={img?.fields?.file?.url}
                                                         src={img?.fields?.file?.url ?? ''}
+                                                        onClick={() => setValue(key)}
+                                                        style={{
+                                                            maxWidth: '100%',
+                                                            padding: '10px',
+                                                        }}
                                                     />
                                                 )
                                             )
                                         }
-                                    />
+                                    </Carousel>
                                 </div>
                             </div>
                         </div>
