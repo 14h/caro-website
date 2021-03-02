@@ -20,7 +20,7 @@ export default function Projects({projects}) {
                     <h1 className="text-6xl md:text-6xl lg:text-7xl font-bold md:leading-none mt-48 mb-12 text-center">
                         WORK
                     </h1>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 container mx-auto px-20 relative">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 container mx-auto px-8 lg:px-20 relative">
 
                         {
                             projects.map(
@@ -31,12 +31,18 @@ export default function Projects({projects}) {
                                     >
                                         <div
                                             className='relative overflow-hidden'
+                                            style={{
+                                                backgroundImage: `url(https:${project?.coverImage?.fields?.file?.url})`,
+                                                height: '25vh',
+                                                backgroundSize: 'cover',
+                                                backgroundPosition: 'center',
+                                            }}
                                         >
-                                            <img
-                                                className='h-auto  object-cover'
-                                                src={project?.coverImage?.fields?.file?.url ?? ''}
-                                                alt={project.slug}
-                                            />
+                                            {/*<img*/}
+                                            {/*    className='h-auto  object-cover'*/}
+                                            {/*    src={project?.coverImage?.fields?.file?.url ?? ''}*/}
+                                            {/*    alt={project.slug}*/}
+                                            {/*/>*/}
                                             <div
                                                 className='absolute top-0 right-0 left-0 bottom-0 z-10 bg-black bg-opacity-50 hover:bg-opacity-50 text-white flex flex-col justify-center items-center text-3xl transition opacity-0 hover:opacity-100 transition-all duration-300 ease-in-out'
                                             >
