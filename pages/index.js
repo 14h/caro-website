@@ -27,11 +27,11 @@ export default function Index() {
                                     WORK
                                 </div>
                             </Link>
-                            <Link href='/work-in-progress'>
-                                <div className={`text-white font-mushroom p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300`}>
-                                    WORK IN PROGRESS
-                                </div>
-                            </Link>
+                            {/*<Link href='/work-in-progress'>*/}
+                            {/*    <div className={`text-white font-mushroom p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300`}>*/}
+                            {/*        WORK IN PROGRESS*/}
+                            {/*    </div>*/}
+                            {/*</Link>*/}
                             <Link href='/about'>
                                 <div className={`text-white font-mushroom p-4 cursor-pointer border-b-2 border-solid border-transparent hover:border-gray-300 `}>
                                     ABOUT

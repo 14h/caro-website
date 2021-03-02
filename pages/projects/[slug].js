@@ -34,7 +34,6 @@ export default function Post({project}) {
             </Layout>
         )
     }
-    console.log(project)
 
     return (
         <Layout>
@@ -42,72 +41,70 @@ export default function Post({project}) {
                 <Header
                     selected_nav_elem='projects'
                 />
-                <div className='mt-64'>
-                    <article>
-                        <Head>
-                            <title>
-                                {project.name}
-                            </title>
-                            {/*<meta property="og:image" content={project.coverImage.url}/>*/}
-                        </Head>
-                        <div className="mt-20 container-l mx-auto">
-                            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold md:leading-none mb-12 text-center">
-                                {project.name}
-                            </h1>
-                            <div className='lg:flex'>
-                                <div className='m-8 lg:w-3/12'>
-                                    {documentToReactComponents(project.sideText)}
-                                </div>
-                                <div className='m-8 lg:w-9/12'>
-                                    <Carousel
-                                        value={value}
-                                        onChange={setValue}
-                                        infinite={true}
-                                    >
-                                        {
-                                            project.images?.map(
-                                                (img) => (
-                                                    <img
-                                                        key={img?.fields?.file?.url}
-                                                        src={img?.fields?.file?.url ?? ''}
-                                                        style={{
-                                                            maxWidth: '100%',
-                                                        }}
-                                                    />
-                                                )
+                <article>
+                    <Head>
+                        <title>
+                            {project.name}
+                        </title>
+                        {/*<meta property="og:image" content={project.coverImage.url}/>*/}
+                    </Head>
+                    <div className="mt-48 container-l mx-auto">
+                        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold md:leading-none mb-12 text-center">
+                            {project.name}
+                        </h1>
+                        <div className='lg:flex'>
+                            <div className='m-8 lg:w-3/12'>
+                                {documentToReactComponents(project.sideText)}
+                            </div>
+                            <div className='m-8 lg:w-9/12'>
+                                <Carousel
+                                    value={value}
+                                    onChange={setValue}
+                                    infinite={true}
+                                >
+                                    {
+                                        project.images?.map(
+                                            (img) => (
+                                                <img
+                                                    key={img?.fields?.file?.url}
+                                                    src={img?.fields?.file?.url ?? ''}
+                                                    style={{
+                                                        maxWidth: '100%',
+                                                    }}
+                                                />
                                             )
-                                        }
-                                    </Carousel>
-                                    <Carousel
-                                        value={value}
-                                        onChange={setValue}
-                                        addArrowClickHandler={true}
-                                        slidesPerPage={5}
-                                        infinite={true}
-                                        arrowLeft={<a href='#'>⟵</a>}
-                                        arrowRight={<a href='#'>⟶</a>}
-                                    >
-                                        {
-                                            project.images?.map(
-                                                (img, key) => (
-                                                    <img
-                                                        key={img?.fields?.file?.url}
-                                                        src={img?.fields?.file?.url ?? ''}
-                                                        onClick={() => setValue(key)}
-                                                        style={{
-                                                            maxWidth: '100%',
-                                                            padding: '10px',
-                                                        }}
-                                                    />
-                                                )
+                                        )
+                                    }
+                                </Carousel>
+                                <Carousel
+                                    value={value}
+                                    onChange={setValue}
+                                    addArrowClickHandler={true}
+                                    slidesPerPage={5}
+                                    infinite={true}
+                                    arrowLeft={<a href='#'>⟵</a>}
+                                    arrowRight={<a href='#'>⟶</a>}
+                                >
+                                    {
+                                        project.images?.map(
+                                            (img, key) => (
+                                                <img
+                                                    key={img?.fields?.file?.url}
+                                                    src={img?.fields?.file?.url ?? ''}
+                                                    onClick={() => setValue(key)}
+                                                    style={{
+                                                        maxWidth: '100%',
+                                                        padding: '10px',
+                                                    }}
+                                                />
                                             )
-                                        }
-                                    </Carousel>
-                                </div>
+                                        )
+                                    }
+                                </Carousel>
                             </div>
                         </div>
-                    </article>
-                </div>
+                    </div>
+                </article>
             </Container>
         </Layout>
     )
